@@ -2,12 +2,30 @@
 
 namespace App\Http\Controllers;
 
+use App\Services\AuthorService;
 use App\Traits\ApiResponse;
 use Illuminate\Http\Request;
 
 class AuthorController extends Controller
 {
     use ApiResponse;
+
+    /**
+     * The service to consume the author service
+     * 
+     * @var authorService
+     */
+    public $authorService;
+
+    /**
+     * Create a new controller instance
+     * 
+     * @return void
+     */
+    public function __construct(AuthorService $authorService)
+    {
+        $this->authorService = $authorService;
+    }
 
     /**
      * Return authors list
