@@ -16,5 +16,6 @@ trait ConsumeExternalService
 
         return $response->getBody()->getContents();
     }
+  
 }
 
