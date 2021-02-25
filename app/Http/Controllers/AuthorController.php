@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use GuzzleHttp\Client;
 use App\Traits\ApiResponse;
 use Illuminate\Http\Request;
 use App\Services\AuthorService;
