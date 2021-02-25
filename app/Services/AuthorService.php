@@ -25,4 +25,19 @@ class AuthorService
     {
         return $this->performRequest('POST','authors',$formParams);
     }
+
+    public function obtainAuthor($author)
+    {
+        return $this->performRequest('GET',"authors/{$author}");
+    }
+
+    public function editAuthor($formParams, $author)
+    {
+        return $this->performRequest('PUT',"authors/{$author}",$formParams);
+    }
+
+    public function deleteAuthor($author)
+    {
+        return $this->performRequest('DELETE',"authors/{$author}");
+    }
 }
